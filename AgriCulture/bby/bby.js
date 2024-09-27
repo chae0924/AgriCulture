@@ -1,6 +1,15 @@
 window.addEventListener('load',function(){
-  const mynavi = this.document.querySelectorAll("#navmenu li"); // 배열형 데이터
-  mynavi[3].innerHTML = `<a href="${navidata[0].d1href}">${navidata[0].d1text}</a>`;
-  mynavi[2].innerHTML = `<a href="${navidata[1].d1href}">${navidata[1].d1text}</a>`;
+
+  const mynavi = this.document.querySelector("#navmenu ul"); // 배열형 데이터
+
+  let mytag = '';
+
+  for( x  in navidata){
+  mytag += `<li> <a href="${x.d1href}"__target="${x.d1href}">${navidata[x].d1text}</a> </li>`;
+  }
+
+      // mynavi.innerHTML = mytag;
+
   // 확인 요소검사
+
 })
